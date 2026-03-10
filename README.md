@@ -5,12 +5,15 @@ Financial markets operate under different latent regimes such as bull markets, b
 Traditional regime detection methods commonly rely on statistical models such as the Hidden Markov Model, which infer hidden states from observed market data. However, most existing implementations have several limitations:
 
 Single-Asset Focus
+
 Many models rely only on equity market returns, ignoring other asset classes such as bonds, commodities, and volatility indices that contain valuable macroeconomic information.
 
 Hand-Crafted Features
+
 Conventional approaches depend on manually engineered indicators such as returns, volatility, and momentum. These features may fail to capture complex and nonlinear relationships present in financial markets.
 
 Limited Representation of Market Dynamics
+
 Traditional models assume relatively simple statistical structures and may not adequately represent the evolving and interconnected nature of modern financial systems.
 
 Due to these limitations, existing techniques may produce unstable regime classifications and incomplete representations of market behavior.
@@ -58,12 +61,15 @@ Key Contributions
 The proposed approach introduces several improvements over traditional regime detection methods:
 
 Cross-Asset Market Modeling
+
 Captures interactions between multiple asset classes rather than relying on a single market.
 
 Deep Representation Learning
+
 Automatically extracts meaningful features from financial time series without manual feature engineering.
 
 Improved Regime Identification
+
 Combines deep learning with probabilistic modeling to detect more stable and interpretable market regimes.
 
 Expected Outcomes
