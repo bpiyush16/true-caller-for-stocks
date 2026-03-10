@@ -1,12 +1,77 @@
-# true-caller-for-stocks
+Problem Statement
 
-In today’s hyper-volatile markets, retail traders are constantly being lured into liquidity traps and pump-and-dump schemes driven by social media hype and algorithmic manipulation. My approach addresses this by acting as a real-time “Financial Lie Detector” that uses advanced Volume-Spread Analysis to instantly distinguish between artificial price spikes and genuine institutional conviction. By cross-referencing price action against raw order flow, the platform exposes the “footprints” of the big players, identifying exactly when smart money is absorbing market fear or strategically setting a trap for impulsive traders.
+Financial markets operate under different latent regimes such as bull markets, bear markets, high-volatility periods, and macroeconomic stress conditions. Correctly identifying these regimes is crucial for risk management, portfolio allocation, and algorithmic trading strategies.
 
-As there are many ways to detect lies, one such method is the Mean Reversion Strategy, in which the “mean” is the baseline or average price where a stock usually stays. When you see a stock price suddenly rocket upward or crash downward without a strong real-world reason (the “lie”), it becomes statistically overstretched. It is the ultimate anti-FOMO strategy because it teaches you that the faster a price moves away from its mean without high-volume support, the more likely it is “lying,” and the sooner it will snap back. By focusing on this “snap-back” effect, you stop buying at the top of a hype cycle and start trading based on statistical probability rather than raw emotion.
+Traditional regime detection methods commonly rely on statistical models such as the Hidden Markov Model, which infer hidden states from observed market data. However, most existing implementations have several limitations:
 
-This is the article that explains mean reversion:
-https://enrichmoney.in/blog-article/mean-reversion-trading-algorithmic-strategy
+Single-Asset Focus
+Many models rely only on equity market returns, ignoring other asset classes such as bonds, commodities, and volatility indices that contain valuable macroeconomic information.
 
-To obtain real-time data for this, I am going to use the Alpaca platform. This platform will provide real-time data instantly, enabling users to make fast decisions. Alpaca also has an API that can be easily integrated into an application or website.
+Hand-Crafted Features
+Conventional approaches depend on manually engineered indicators such as returns, volatility, and momentum. These features may fail to capture complex and nonlinear relationships present in financial markets.
 
-So basically, what I want to do is create a Truecaller for stocks that will help traders avoid impulsive decisions and protect them from false information in this day and age.
+Limited Representation of Market Dynamics
+Traditional models assume relatively simple statistical structures and may not adequately represent the evolving and interconnected nature of modern financial systems.
+
+Due to these limitations, existing techniques may produce unstable regime classifications and incomplete representations of market behavior.
+
+Proposed Solution
+
+To address these limitations, this project proposes a deep learning-enhanced market regime detection framework that integrates cross-asset financial data with representation learning.
+
+The key idea is to combine deep time-series modeling with probabilistic regime detection.
+
+The proposed framework consists of three main components:
+
+1. Cross-Asset Market Data Integration
+
+Instead of relying solely on equity prices, the model incorporates multiple asset classes such as:
+
+equity indices
+
+volatility indices
+
+commodities
+
+bond yields
+
+cryptocurrencies
+
+This cross-asset dataset provides a broader view of global financial conditions and allows the model to capture macroeconomic influences on market behavior.
+
+2. Deep Feature Extraction Using LSTM
+
+The project uses a Long Short-Term Memory network to learn latent representations of financial time-series data.
+
+The LSTM processes sequences of historical market data and automatically extracts hidden temporal patterns and nonlinear relationships across assets.
+
+This step replaces traditional hand-crafted features with data-driven representations of market states.
+
+3. Regime Detection with Hidden Markov Model
+
+The learned latent features are then used as inputs to a Hidden Markov Model to identify underlying market regimes.
+
+The HMM models the transition probabilities between hidden states and classifies each time period into a specific market regime.
+
+Key Contributions
+
+The proposed approach introduces several improvements over traditional regime detection methods:
+
+Cross-Asset Market Modeling
+Captures interactions between multiple asset classes rather than relying on a single market.
+
+Deep Representation Learning
+Automatically extracts meaningful features from financial time series without manual feature engineering.
+
+Improved Regime Identification
+Combines deep learning with probabilistic modeling to detect more stable and interpretable market regimes.
+
+Expected Outcomes
+
+The proposed framework aims to:
+
+identify distinct financial market regimes
+
+improve stability and interpretability of regime classification
+
+provide a foundation for regime-adaptive trading and risk management strategies
