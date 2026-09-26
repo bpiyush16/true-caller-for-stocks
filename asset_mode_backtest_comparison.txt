@@ -1,0 +1,13 @@
+MULTI-ASSET VS SINGLE-ASSET BACKTEST
+============================================================
+Period: 2025-01-01 to 2026-04-20
+Days evaluated: 324
+
+Variant                      Accuracy     Macro view       Transition Hit
+------------------------------------------------------------------------------
+Multi-Asset                    97.53%      98.70% hi-conf   1/5 (20.0%)
+Single-Asset (SP500 only)      86.73%      88.81% hi-conf   1/5 (20.0%)
+
+Accuracy gap (multi - single): +10.80 percentage points
+High-conf gap (multi - single): +9.89 percentage points
+Transition gap (multi - single): +0.0 percentage points

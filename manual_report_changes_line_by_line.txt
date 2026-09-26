@@ -1,0 +1,414 @@
+MANUAL EDIT LIST (based on D:\Downloads\Piyush_Bale_CS300_Report.docx)
+Paragraph numbering is 0-based from python-docx.
+
+Paragraph 69
+OLD: Tesla  T4  GPU  acceleration  demonstrate  that  the  Multi-Asset  variant  achieves  a
+NEW: Tesla  T4  GPU  acceleration  demonstrate  that  the  Multi-Asset  variant  achieves  a
+
+Paragraph 70
+OLD: backtest  accuracy  of  97.53%  for  the  2025–2026  period,  representing  a  significant
+NEW: proxy-label  agreement  of  97.53%  for  the  2025?2026  period,  representing  a
+
+Paragraph 71
+OLD: +10.80  percentage  point  improvement  over  models  restricted  to  S&P;  500  data
+NEW: +10.80  percentage  point  improvement  over  models  restricted  to  S&P;  500  data
+
+Paragraph 72
+OLD: alone.  Furthermore,  the  Multi-Asset  model  exhibited  a  0.94  precision  score  for  the
+NEW: alone.  Furthermore,  the  Multi-Asset  model  exhibited  a  0.94  precision  score  for  the
+
+Paragraph 73
+OLD: "Crisis"  regime,  successfully  flagging  the  March  2023  regional  banking  stress  as
+NEW: "Crisis"  proxy  regime,  while  the  March  2023  regional  banking  stress  episode  is
+
+Paragraph 74
+OLD: "Risk-Off"  with  99.1%  confidence  while  maintaining  an  out-of-sample  profile.  This
+NEW: treated  as  a  qualitative  "Risk-Off"  case  study  rather  than  externally  validated
+
+Paragraph 75
+OLD: research confirms that financial regimes are a systemic phenomenon best predicted
+NEW: market  ground  truth.  These  results  indicate  that  financial  regimes  are  better
+
+Paragraph 76
+OLD: through the lens of inter-market relationships.
+NEW: studied through the lens of inter-market relationships within an internal framework.
+
+Paragraph 150
+OLD: Figure 5.1:  Rolling backtest: Actual vs. Predicted regimes, predicted class probabilities,
+NEW: Figure 5.1:  Rolling backtest: Proxy labels vs. Predicted regimes, predicted class probabilities,
+
+Paragraph 158
+OLD: alongside rolling 30-day backtest accuracy and model confidence over the evaluation
+NEW: alongside rolling 30-day backtest agreement and model confidence over the evaluation
+
+Paragraph 242
+OLD: (cid:127)  State Discovery Layer: A Gaussian HMM that performs unsupervised
+NEW: (cid:127)  State Discovery Layer: A Gaussian HMM that performs unsupervised
+
+Paragraph 243
+OLD: clustering to define the boundaries between Calm, Risk-Off, and Crisis regimes.
+NEW: clustering to identify two broad latent market states for exploratory regime analysis.
+
+Paragraph 245
+OLD: (cid:127)  Predictive Logic Layer: A supervised sequence-to-label LSTM that generates
+NEW: (cid:127)  Predictive Logic Layer: A supervised sequence-to-label LSTM that generates
+
+Paragraph 246
+OLD: "tomorrow forecasts" based on the patterns discovered in the historical latent
+NEW: "tomorrow forecasts" for custom proxy regimes using trailing engineered market
+
+Paragraph 247
+OLD: space.
+NEW: features and the labeling logic defined for the supervised stage.
+
+Paragraph 250
+OLD: replays the model across unseen data (2025–2026) to quantify accuracy and
+NEW: replays the model across unseen data (2025?2026) to quantify agreement and
+
+Paragraph 267
+OLD: accuracy gap between multi-asset and single-asset configurations.
+NEW: proxy-label agreement gap between multi-asset and single-asset configurations.
+
+Paragraph 415
+OLD: (cid:127)  Target Labeling: It utilizes a custom "Soft-Labeler" that blends HMM states
+NEW: (cid:127)  Target Labeling: It utilizes a custom "Soft-Labeler" based on
+
+Paragraph 416
+OLD: with sigmoid-based volatility scores to produce smooth, non-flickering regime
+NEW: sigmoid-based volatility, return, and VIX heuristics with exponential
+
+Paragraph 417
+OLD: labels.
+NEW: smoothing to produce smooth, non-flickering proxy regime labels.
+
+Paragraph 419
+OLD: (cid:127)  Classification Engine: A 2-layer LSTM with dropout is trained on these labels
+NEW: (cid:127)  Classification Engine: A 2-layer LSTM with dropout is trained on these
+
+Paragraph 420
+OLD: to forecast the regime for the "next-day" based on the trailing 20 days of market
+NEW: proxy labels to forecast the regime for the "next-day" based on the trailing 20 days of market
+
+Paragraph 421
+OLD: features.
+NEW: features.
+
+Paragraph 488
+OLD: (cid:127)  Normalization: Raw prices are converted to percentage changes (log-returns)
+NEW: (cid:127)  Normalization: Raw prices are converted to daily percentage returns
+
+Paragraph 489
+OLD: and processed using a MinMaxScaler to bound values between [0, 1], which was
+NEW: and processed using a MinMaxScaler to bound values between [0, 1], which was
+
+Paragraph 490
+OLD: found essential for the convergence of the LSTM Autoencoder.
+NEW: found essential for the convergence of the LSTM Autoencoder.
+
+Paragraph 521
+OLD: Stage 4 (Supervised Training): A supervised LSTM classifier is trained to forecast
+NEW: Stage 4 (Supervised Training): A supervised LSTM classifier is trained to forecast
+
+Paragraph 522
+OLD: the  HMM-identified  regimes,  utilizing  Class  Weights  to  address  the  rarity  of  Crisis
+NEW: custom 3-class proxy regimes generated by the soft-labeling logic, utilizing Class
+
+Paragraph 523
+OLD: events.
+NEW: Weights to address the rarity of Crisis events.
+
+Paragraph 525
+OLD: Stage 5 (Out-of-Sample Prediction): The model is run on the 2023 calendar year,
+NEW: Stage 5 (Out-of-Sample Prediction): The model is run on the 2023 calendar year,
+
+Paragraph 526
+OLD: validating  its  ability  to  detect  the  March  2023  Bank  Crisis  with  99%  confidence
+NEW: serving as a proxy-label agreement check and as a qualitative case study during
+
+Paragraph 527
+OLD: despite no prior exposure.
+NEW: the March 2023 regional banking stress episode.
+
+Paragraph 530
+OLD: performed from January 2025 to April 2026, quantifying the +10.8% accuracy gap in
+NEW: performed from January 2025 to April 2026, quantifying the +10.8% agreement gap in
+
+Paragraph 534
+OLD: the 97.53% overall accuracy.
+NEW: the 97.53% overall agreement with the internal proxy labels.
+
+Paragraph 637
+OLD: During Stage 1, a race condition occurred within the yfinance multi-threading engine,
+NEW: During Stage 1, a race condition occurred within the yfinance multi-threading engine,
+
+Paragraph 638
+OLD: leading  to  OperationalError:  database  is  locked.  This  was  identified  as  an  SQLite
+NEW: leading  to  cache-related  OperationalError  risk.  This  was  traced  to  Yahoo  Finance
+
+Paragraph 639
+OLD: concurrency  conflict  where  multiple  threads  attempted  to  write  to  the  local  cache
+NEW: and SQLite cache contention where multiple requests could compete for local state
+
+Paragraph 640
+OLD: simultaneously.  The  solution 
+NEW: simultaneously.  The  practical  mitigation  involved  hardening  the  download  stage
+
+Paragraph 641
+OLD: ingestion
+NEW: with safer retry / timeout handling and more defensive data validation during
+
+Paragraph 642
+OLD: (threads=False) to ensure thread-safe SQLite cache writes.
+NEW: ingestion rather than assuming the cache path was fully thread-safe.
+
+Paragraph 644
+OLD: forcing  sequential  data 
+NEW: 
+
+Paragraph 646
+OLD: involved 
+NEW: 
+
+Paragraph 666
+OLD: The  performance  of  the  market  regime  detection  engine  was  evaluated  using  a
+NEW: The  performance  of  the  market  regime  detection  engine  was  evaluated  using  a
+
+Paragraph 667
+OLD: combination  of  classification  and  financial  backtesting  metrics  to  quantify  its
+NEW: combination  of  classification  and  financial  backtesting  metrics  to  quantify  its
+
+Paragraph 668
+OLD: predictive accuracy and stability.
+NEW: agreement with internally generated proxy labels and overall stability.
+
+Paragraph 670
+OLD: (cid:127)  Total Accuracy: The percentage of trading days where the forecasted regime
+NEW: (cid:127)  Total Agreement: The percentage of trading days where the forecasted regime
+
+Paragraph 671
+OLD: for "tomorrow" matched the actual ground-truth label.
+NEW: for "tomorrow" matched the internally generated proxy label.
+
+Paragraph 678
+OLD: (cid:127)  High-Confidence Accuracy (Acc
+NEW: (cid:127)  High-Confidence Agreement: The agreement achieved specifically on
+
+Paragraph 679
+OLD: high
+NEW: days where the model's prediction probability exceeded a threshold of 0.80,
+
+Paragraph 680
+OLD: days where the model's prediction probability exceeded a threshold of 0.80,
+NEW: indicating the reliability of the signal during periods of high certainty.
+
+Paragraph 683
+OLD: ): The accuracy achieved specifically on
+NEW: 
+
+Paragraph 693
+OLD: The  primary  objective  was  to  evaluate  the  "Multi-Asset  Advantage."  The  backtest
+NEW: The  primary  objective  was  to  evaluate  the  "Multi-Asset  Advantage."  The  backtest
+
+Paragraph 694
+OLD: was conducted over a period of 324 trading days, spanning from January 1, 2025, to
+NEW: was conducted over a period of 324 trading days, spanning from January 1, 2025, to
+
+Paragraph 695
+OLD: April  21,  2026.  The  quantitative  results  demonstrate  a  clear  superiority  of  the
+NEW: April  21,  2026.  Within  the  internal  proxy-label  evaluation  framework,  the
+
+Paragraph 696
+OLD: multi-asset approach.
+NEW: quantitative results demonstrate a clear superiority of the multi-asset approach.
+
+Paragraph 700
+OLD: Accuracy
+NEW: Agreement
+
+Paragraph 704
+OLD: High-Conf Acc.
+NEW: High-Conf Agree.
+
+Paragraph 740
+OLD: The  Multi-Asset  model  exhibited  a  significant  accuracy  lead,  correctly  identifying
+NEW: The  Multi-Asset  model  exhibited  a  significant  agreement  lead,  correctly  matching
+
+Paragraph 741
+OLD: nearly 11% more trading days than the S&P; 500-only model. This performance gap
+NEW: nearly 11% more proxy-labeled trading days than the S&P; 500-only model. This
+
+Paragraph 742
+OLD: confirms  that  inter-market  signals—such  as  Gold  price  shifts  or  Bond  yield
+NEW: performance gap confirms that inter-market signals?such as Gold price shifts or Bond
+
+Paragraph 743
+OLD: inversions—provide  critical  context  for  identifying  regime  boundaries  that  equity
+NEW: yield inversions?provide critical context that equity prices alone cannot capture.
+
+Paragraph 749
+OLD: Figure 5.1: Rolling backtest (January 2025 – April 2026): Actual vs. Predicted next-day
+NEW: Figure 5.1: Rolling backtest (January 2025 ? April 2026): Proxy labels vs. Predicted next-day
+
+Paragraph 750
+OLD: regimes (top), predicted class probabilities for Calm, Risk-Off and Crisis (middle), and
+NEW: regimes (top), predicted class probabilities for Calm, Risk-Off and Crisis (middle), and
+
+Paragraph 751
+OLD: prediction errors with model confidence overlay (bottom). Pink bands indicate misprediction
+NEW: prediction errors with model confidence overlay (bottom). Pink bands indicate misprediction
+
+Paragraph 752
+OLD: days; grey vertical lines mark actual regime transitions.
+NEW: days; grey vertical lines mark proxy regime transitions.
+
+Paragraph 756
+OLD: The  following  tables  provide  a  granular  view  of  the  model's  ability  to  differentiate
+NEW: The  following  tables  provide  a  granular  view  of  the  model's  ability  to  differentiate
+
+Paragraph 757
+OLD: between  the  three  market  states.  The  Multi-Asset  model  achieves  near-perfect
+NEW: between  the  three  proxy  market  states  used  in  the  evaluation  framework.  The
+
+Paragraph 758
+OLD: scores  for  the  "Calm  Market"  and  maintains  very  high  precision  for  "Risk-Off"  and
+NEW: Multi-Asset  model  achieves  near-perfect  scores  for  the  "Calm  Market"  and  maintains
+
+Paragraph 759
+OLD: "Crisis."
+NEW: very high precision for "Risk-Off" and "Crisis."
+
+Paragraph 930
+OLD: Figure 5.2: Regime comparison plot showing Multi-Asset vs. Single-Asset predicted regimes
+NEW: Figure 5.2: Regime comparison plot showing Multi-Asset vs. Single-Asset predicted regimes
+
+Paragraph 931
+OLD: alongside the actual ground truth (top), rolling 30-day backtest accuracy for both variants
+NEW: alongside the proxy regime labels (top), rolling 30-day backtest agreement for both variants
+
+Paragraph 932
+OLD: (middle), and model confidence over time with grey vertical lines marking actual regime
+NEW: (middle), and model confidence over time with grey vertical lines marking proxy regime
+
+Paragraph 933
+OLD: transitions (bottom). The Single-Asset model's rolling accuracy collapses to below 40% during
+NEW: transitions (bottom). The Single-Asset model's rolling agreement collapses to below 40% during
+
+Paragraph 934
+OLD: the mid-2025 crisis period.
+NEW: the mid-2025 crisis period.
+
+Paragraph 955
+OLD: Both  models  were  relatively  successful  in  identifying  the  "Crisis"  regime,  but  the
+NEW: Both  models  were  relatively  successful  in  identifying  the  "Crisis"  proxy  regime,  but  the
+
+Paragraph 963
+OLD: the  Single-Asset  model  generated  only  290.  Furthermore,  the  accuracy  on  these
+NEW: the  Single-Asset  model  generated  only  290.  Furthermore,  the  agreement  on  these
+
+Paragraph 964
+OLD: high-confidence days was significantly higher for the multi-asset variant (98.70% vs.
+NEW: high-confidence days was significantly higher for the multi-asset variant (98.70% vs.
+
+Paragraph 965
+OLD: 89.66%). This indicates that the inter-market features not only improve accuracy but
+NEW: 89.66%). This indicates that the inter-market features not only improve agreement but
+
+Paragraph 971
+OLD: Despite its high overall accuracy, the Multi-Asset model only correctly predicted the
+NEW: Despite its high overall proxy-label agreement, the Multi-Asset model only correctly predicted the
+
+Paragraph 998
+OLD: (cid:127)  Identification of the Multi-Asset Advantage: A comprehensive profiling of
+NEW: (cid:127)  Identification of the Multi-Asset Advantage: A comprehensive profiling of
+
+Paragraph 999
+OLD: the performance gap between single-index and multi-asset models, establishing
+NEW: the performance gap between single-index and multi-asset models, establishing
+
+Paragraph 1000
+OLD: that inter-market context leads to a +10.80% accuracy improvement.
+NEW: that inter-market context leads to a +10.80% proxy-label agreement improvement.
+
+Paragraph 1002
+OLD: (cid:127)  High-Precision Crisis Detection: The development of a model capable of
+NEW: (cid:127)  Illustrative Stress-Episode Signalling: A model that produced elevated
+
+Paragraph 1003
+OLD: flagging systemic stress events, such as the March 2023 regional banking crisis,
+NEW: Risk-Off behaviour during the March 2023 regional banking stress episode,
+
+Paragraph 1004
+OLD: with 99.1% confidence while maintaining a fully out-of-sample profile.
+NEW: presented as a qualitative case study rather than externally validated ground truth.
+
+Paragraph 1006
+OLD: (cid:127)  End-to-End Forecasting Engine: The delivery of a functional inference
+NEW: (cid:127)  End-to-End Forecasting Engine: The delivery of a functional inference
+
+Paragraph 1007
+OLD: system that provides probabilistic regime forecasts for the subsequent trading
+NEW: system that provides probabilistic regime forecasts for the subsequent trading
+
+Paragraph 1008
+OLD: session, achieving an overall backtest accuracy of 97.53% for the 2025–2026
+NEW: session, achieving an overall backtest agreement of 97.53% for the 2025?2026
+
+Paragraph 1009
+OLD: period.
+NEW: period within the internal proxy-label framework.
+
+Paragraph 1043
+OLD: While  the  current  engine  achieves  high  predictive  accuracy,  several  directions  for
+NEW: While  the  current  engine  achieves  high  proxy-label  agreement,  several  directions  for
+
+Paragraph 1044
+OLD: future enhancement remain:
+NEW: future enhancement remain:
+
+Paragraph 1073
+OLD: The engine was benchmarked across different lookahead configurations, draft model
+NEW: The engine was benchmarked over a 324-day rolling backtest within an internal
+
+Paragraph 1074
+OLD: sizes, and caching configurations using a 324-day rolling backtest. In the absence of
+NEW: proxy-label evaluation framework. In this setting, the multi-asset engine achieved
+
+Paragraph 1075
+OLD: single-asset restrictions, the multi-asset engine achieves a peak accuracy of 97.53%,
+NEW: 97.53% agreement, while the single-asset configuration trailed by 10.80 percentage
+
+Paragraph 1076
+OLD: reaching  a  throughput  of  98.70%  on  high-confidence  prediction  days.  Contrary  to
+NEW: points. These results indicate that inter-market context improves proxy-regime
+
+Paragraph 1077
+OLD: common practice, relying solely on equity index data does not consistently improve
+NEW: modelling even though the reported metrics should not be interpreted as externally
+
+Paragraph 1078
+OLD: performance  in  the  regime  detection  setting.  Instead,  the  single-asset  configuration
+NEW: validated ground-truth regime accuracy.
+
+Paragraph 1079
+OLD: underperforms  relative  to  the  multi-asset  baseline  by  10.80  percentage  points,
+NEW: Instead, they show that combining multiple market channels yields a more informative
+
+Paragraph 1080
+OLD: indicating that the overhead of missing inter-market signals outweighs any simplicity
+NEW: internal representation than relying solely on equity index data.
+
+Paragraph 1085
+OLD: By achieving a 97.53% accuracy and providing clear, high-confidence signals—such
+NEW: By achieving 97.53% agreement within its proxy-label framework and providing
+
+Paragraph 1086
+OLD: as  the  current  Risk-Off  forecast  for  April  21,  2026,  with  98.9%  confidence—this
+NEW: clear, high-confidence signals, this project establishes a useful foundation for
+
+Paragraph 1087
+OLD: project establishes a robust framework for modern quantitative research and market
+NEW: future quantitative research on multi-asset regime modelling, external validation,
+
+Paragraph 1088
+OLD: surveillance.
+NEW: and more responsive transition detection.

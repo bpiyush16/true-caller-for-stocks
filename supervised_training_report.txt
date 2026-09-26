@@ -1,0 +1,21 @@
+MULTI-ASSET VS SINGLE-ASSET COMPARISON
+============================================================
+Variant                      Feat   Test Acc     Macro-F1     Transition Hit
+------------------------------------------------------------------------------
+Multi-Asset                  10       89.38%    0.7988       10/25 (40.0%)
+Single-Asset (SP500 only)    5        84.99%    0.7635       10/25 (40.0%)
+
+Accuracy gap (multi - single):   +4.38 percentage points
+Macro-F1 gap (multi - single):   +0.0353
+Transition gap (multi - single): +0.0 percentage points
+
+
+              precision    recall  f1-score   support
+
+ Calm Market       0.98      0.97      0.98       440
+    Risk-Off       0.75      0.94      0.84       217
+      Crisis       0.88      0.44      0.58        96
+
+    accuracy                           0.89       753
+   macro avg       0.87      0.78      0.80       753
+weighted avg       0.90      0.89      0.89       753

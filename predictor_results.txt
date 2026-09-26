@@ -1,0 +1,18 @@
+
+STAGE 8 - REGIME PREDICTOR RESULTS
+============================================================
+Best epoch:            3
+Validation accuracy:   0.8793 (87.9%)
+Test accuracy:         0.8314 (83.1%)
+Val-to-Test gap:       4.8%
+Transition detection:  5/22
+
+                 precision    recall  f1-score   support
+
+    Calm Market       0.84      0.90      0.87       755
+High Volatility       0.81      0.72      0.76       455
+
+       accuracy                           0.83      1210
+      macro avg       0.83      0.81      0.82      1210
+   weighted avg       0.83      0.83      0.83      1210
+

@@ -1,0 +1,26 @@
+SUPERVISED TOMORROW-PREDICTOR BACKTEST
+============================================================
+Period:                 2025-01-01 to 2026-04-20
+Days evaluated:         324
+Overall accuracy:       0.9753 (97.5%)
+Transitions in period:  5
+Transition hit rate:    1/5 (20.0%)
+High-conf days:         308
+High-conf accuracy:     0.9870
+
+Confusion Matrix:
+             Calm Market  Risk-Off  Crisis
+Calm Market          238         2       0
+Risk-Off               2        44       2
+Crisis                 0         2      34
+
+Classification Report:
+              precision    recall  f1-score   support
+
+ Calm Market       0.99      0.99      0.99       240
+    Risk-Off       0.92      0.92      0.92        48
+      Crisis       0.94      0.94      0.94        36
+
+    accuracy                           0.98       324
+   macro avg       0.95      0.95      0.95       324
+weighted avg       0.98      0.98      0.98       324

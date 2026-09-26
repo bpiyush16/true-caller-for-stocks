@@ -1,0 +1,20 @@
+MULTI-ASSET TRAINING REPORT
+============================================================
+Best epoch:          5
+Best val macro-F1:   0.7089
+Test accuracy:       0.8938 (89.4%)
+Test macro-F1:       0.7988
+Transition hit rate: 10/25 (40.0%)
+
+Test window start:   2022-01-03
+Test window end:     2024-12-31
+
+              precision    recall  f1-score   support
+
+ Calm Market       0.98      0.97      0.98       440
+    Risk-Off       0.75      0.94      0.84       217
+      Crisis       0.88      0.44      0.58        96
+
+    accuracy                           0.89       753
+   macro avg       0.87      0.78      0.80       753
+weighted avg       0.90      0.89      0.89       753

@@ -1,0 +1,20 @@
+SINGLE-ASSET (SP500 ONLY) TRAINING REPORT
+============================================================
+Best epoch:          2
+Best val macro-F1:   0.7411
+Test accuracy:       0.8499 (85.0%)
+Test macro-F1:       0.7635
+Transition hit rate: 10/25 (40.0%)
+
+Test window start:   2022-01-03
+Test window end:     2024-12-31
+
+              precision    recall  f1-score   support
+
+ Calm Market       1.00      0.94      0.97       440
+    Risk-Off       0.72      0.78      0.75       217
+      Crisis       0.55      0.59      0.57        96
+
+    accuracy                           0.85       753
+   macro avg       0.76      0.77      0.76       753
+weighted avg       0.86      0.85      0.85       753

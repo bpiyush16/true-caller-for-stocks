@@ -1,0 +1,59 @@
+EVALUATION RESULTS - MULTI-ASSET VS SINGLE-ASSET
+============================================================
+Days evaluated: 324
+
+Multi-Asset:
+  Accuracy:        0.9753 (97.53%)
+  Macro-F1:        0.9509
+  High-conf days:  308
+  High-conf Acc:   0.9870
+  Transition hit:  1/5 (20.0%)
+
+Single-Asset (SP500 only):
+  Accuracy:        0.8673 (86.73%)
+  Macro-F1:        0.7790
+  High-conf days:  295
+  High-conf Acc:   0.8881
+  Transition hit:  1/5 (20.0%)
+
+Improvement (multi-asset minus single-asset):
+  Accuracy gap:       +10.80 percentage points
+  Macro-F1 gap:       +0.1719
+  High-conf gap:      +9.89 percentage points
+  Transition hit gap: +0.0 percentage points
+
+Multi-Asset Classification Report:
+              precision    recall  f1-score   support
+
+ Calm Market       0.99      0.99      0.99       240
+    Risk-Off       0.92      0.92      0.92        48
+      Crisis       0.94      0.94      0.94        36
+
+    accuracy                           0.98       324
+   macro avg       0.95      0.95      0.95       324
+weighted avg       0.98      0.98      0.98       324
+
+
+Single-Asset Classification Report:
+              precision    recall  f1-score   support
+
+ Calm Market       0.93      0.93      0.93       240
+    Risk-Off       0.56      0.50      0.53        48
+      Crisis       0.85      0.92      0.88        36
+
+    accuracy                           0.87       324
+   macro avg       0.78      0.78      0.78       324
+weighted avg       0.86      0.87      0.86       324
+
+
+Multi-Asset Confusion Matrix:
+             Calm Market  Risk-Off  Crisis
+Calm Market          238         2       0
+Risk-Off               2        44       2
+Crisis                 0         2      34
+
+Single-Asset Confusion Matrix:
+             Calm Market  Risk-Off  Crisis
+Calm Market          224        16       0
+Risk-Off              18        24       6
+Crisis                 0         3      33

@@ -1,0 +1,10 @@
+MULTI-ASSET VS SINGLE-ASSET COMPARISON
+============================================================
+Variant                      Feat   Test Acc     Macro-F1     Transition Hit
+------------------------------------------------------------------------------
+Multi-Asset                  10       89.38%    0.7988       10/25 (40.0%)
+Single-Asset (SP500 only)    5        84.99%    0.7635       10/25 (40.0%)
+
+Accuracy gap (multi - single):   +4.38 percentage points
+Macro-F1 gap (multi - single):   +0.0353
+Transition gap (multi - single): +0.0 percentage points
